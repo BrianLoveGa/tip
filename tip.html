@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip What? Gratuity</title>
+    <link rel="stylesheet" type="text/css" href="tip.css" />
+  </head>
+  <body>
+    <div class="tip">
+      <form>
+        <h2>How much gratuity do I tip for my meal?</h2>
+        <h2>For awful service 15% for the best 25% or 30%</h2>
+        <h2>Hate math?</h2>
+        <h2>Allow some javascript to help you out</h2>
+        <h3>input the check amount below and click to see</h3>
+
+        <h4>Amount of bill: $ <input type="number" id="amount" /></h4>
+        <br />
+        <button id="billSet" onclick="setBill()">set bill amount</button>
+        <br />
+        <h4 class="owe">
+          Amount of 15% tip: $
+          <div class="tip" id="tip15"></div>
+        </h4>
+        <h4 class="owe">
+          Amount of 20% tip: $
+          <div class="tip" id="tip20"></div>
+        </h4>
+        <h4 class="owe">
+          Amount of 25% tip: $
+          <div class="tip" id="tip25"></div>
+        </h4>
+        <h4 class="owe">
+          Amount of 30% tip: $
+          <div class="tip" id="tip30"></div>
+        </h4>
+      </form>
+    </div>
+    
+    <a href='split.html'>Split the bill</a>
+    <a href='discount.html'>Discount %</a>
+    <a href='index.html'>HOME</a>
+    <script src="tip.js"></script>
+  </body>
+</html>
