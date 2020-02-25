@@ -1,6 +1,7 @@
 console.log("tips");
-
+////////////////
 // gratuity
+////////////////
 
 document.getElementById("billSet").addEventListener("click", function(event) {
   event.preventDefault();
@@ -36,7 +37,9 @@ function setBill() {
   }
 }
 
+///////////////////////////
 /// split the bill
+///////////////////////////
 
 document.getElementById("billSplit").addEventListener("click", function(event) {
   event.preventDefault();
@@ -46,9 +49,38 @@ function splitBill() {
   let bill = document.getElementById("billSplitBill").value;
   let people = document.getElementById("billSplitPeople").value;
   let amount = document.getElementById("billSplitAmount");
+  let info = document.getElementById("info");
   let even = Math.round((bill / people) * 100) / 100;
   amount.innerText = `$ ${even}  per person`;
   let leftOver = document.getElementById("left");
-  let remainder = Math.round(((even * people) - bill)*100)/100;
-  leftOver.innerText = `with $ ${remainder} left over `;
+  let remainder = Math.round((even * people - bill) * 100) / 100;
+  if (remainder === 0.0) {
+    leftOver.innerText = `even split ${remainder} `;
+    info.innerText = "";
+  } else if (remainder > 0) {
+    leftOver.innerText = `with $ ${remainder}  left-over. `;
+    info.innerText = `one person needs to pay ${remainder} less than everyone else`;
+  } else {
+    leftOver.innerText = `with $ ${remainder * -1} under-paid. `;
+    info.innerText = `one person needs to pay ${remainder * -1} extra`;
+  }
+}
+
+/////////
+/// discount calc
+///////////
+
+document.getElementById("discount").addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+function discount() {
+  let neeew = document.getElementById("new");
+  let percent = document.getElementById("percent").value;
+  let amount = document.getElementById("itemAmount").value;
+  let amountOff = amount * (percent / 100);
+  let newCost = Math.round((amount - amountOff) * 100) / 100;
+  let round = Math.round(amountOff * 100) / 100;
+
+  neeew.innerText = `$ ${newCost} ($ ${amount} - $ ${round}) `;
 }

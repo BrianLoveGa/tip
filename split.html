@@ -11,10 +11,30 @@
     <h2>amount of bill input</h2>
     <h4>Amount of bill: $ <input type="number" id="billSplitBill" /></h4>
     <h2>dropdown 2-11 people select</h2>
-    <input type="number" min="2" max="11" id="billSplitPeople" />
+    <!-- <input type="number" min="2" max="11" id="billSplitPeople" /> -->
+    <select id="billSplitPeople" name="number of people">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+    </select>
+
     <button id="billSplit" onclick="splitBill()">Click 2 split</button>
-    <h2>each person owes <div class="billSplit" id="billSplitAmount">$000.00</div> <div class="billSplit" id="left"></div></h2>
- <div class="space"></div>
+    <h2>
+      each person owes
+      <div class="billSplit" id="billSplitAmount">$000.00</div>
+      <div class="billSplit" id="left"></div>
+      <div class="billSplit" id="info" ></div>
+    </h2>
+    <div class="space"></div>
     <a href="tip.html">Service Tip</a>
     <a href="discount.html">Discount %</a>
     <a href="index.html">HOME</a>
