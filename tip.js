@@ -1,5 +1,7 @@
 console.log("tips");
 
+// gratuity
+
 document.getElementById("billSet").addEventListener("click", function(event) {
   event.preventDefault();
 });
@@ -29,7 +31,24 @@ function setBill() {
     twfv.textContent = tTwFv;
 
     var totalThirty = check * 0.3;
-    tThIR = Math.round(totalThirty *100) /100;
+    tThIR = Math.round(totalThirty * 100) / 100;
     thir.textContent = tThIR;
   }
+}
+
+/// split the bill
+
+document.getElementById("billSplit").addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+function splitBill() {
+  let bill = document.getElementById("billSplitBill").value;
+  let people = document.getElementById("billSplitPeople").value;
+  let amount = document.getElementById("billSplitAmount");
+  let even = Math.round((bill / people) * 100) / 100;
+  amount.innerText = `$ ${even}  per person`;
+  let leftOver = document.getElementById("left");
+  let remainder = Math.round(((even * people) - bill)*100)/100;
+  leftOver.innerText = `with $ ${remainder} left over `;
 }

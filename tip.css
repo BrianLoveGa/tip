@@ -1,8 +1,11 @@
 body {
-    background-color: peachpuff;
+  background-color: peachpuff;
 }
 
-
 .tip {
-    background-color: palevioletred;
+  background-color: palevioletred;
+}
+
+.space {
+  height: 20px;
 }
