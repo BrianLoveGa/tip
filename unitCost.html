@@ -13,15 +13,35 @@
       </h2>
       <h2>Allow us to help</h2>
     
-<h3>input item a name ... item a count - total cost a</h3>
-<h3>input item b name ... item b count - total cost b</h3>
-<h3>input item c name ... item c count - total cost c</h3>
-<h3>input item d name ... item d count - total cost d</h3>
-<button>break it down</button>
-<h3> item a ... unit cost</h3>
-<h3> item b ... unit cost</h3>
-<h3> item c ... unit cost</h3>
-<h3> item d ... unit cost</h3>
+<h3> A name ... 
+<input class="items" type="text" id="itemA" name="item A" maxlength="20"/>
+ A count ... 
+<input type="number" id="itemAcount" name="item A count"/>
+Total cost A = $
+<input type="number" id="itemAcost" name="item A cost"/></h3>
+<h3> B name ...  
+<input class="items" type="text" id="itemB" name="item B" maxlength="20"/>
+ B count ...
+<input type="number" id="itemBcount" name="item B count"/>
+Total cost B = $
+<input type="number" id="itemBcost" name="item B cost"/> </h3>
+<h3> C name ...  
+<input class="items" type="text" id="itemC" name="item C" maxlength="20"/>
+ C count ...
+<input type="number" id="itemCcount" name="item C count"/>
+Total cost C = $
+<input type="number" id="itemCcost" name="item C cost"/> </h3>
+<h3> D name ... 
+<input class="items" type="text" id="itemD" name="item D" maxlength="20"/>
+ D count ...
+<input type="number" id="itemDcount" name="item D count"/>
+Total cost D = $
+<input type="number" id="itemDcost" name="item D cost"/> </h3>
+<button id="cost" class="click" onclick="costBreakdown()">break it down</button>
+<h3> <div id="itemAname">item a</div> ... <div id="costA"></div></h3>
+<h3> <div id="itemBname">item b</div> ... <div id="costB"></div></h3>
+<h3> <div id="itemCname">item c</div> ... <div id="costC"></div></h3>
+<h3> <div id="itemDname">item d</div> ... <div id="costD"></div></h3>
 </div>
     <div class="space"></div>
     <a class="homeBtn" href="tip.html">Service Tip</a>

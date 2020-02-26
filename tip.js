@@ -66,9 +66,9 @@ function splitBill() {
   }
 }
 
-/////////
+////////////////////////
 /// discount calc
-///////////
+/////////////////////////
 
 document.getElementById("discount").addEventListener("click", function(event) {
   event.preventDefault();
@@ -83,4 +83,56 @@ function discount() {
   let round = (Math.round(amountOff * 100) / 100).toFixed(2);
 
   neeew.innerText = `$ ${newCost} = ($ ${amount} - $ ${round}) `;
+}
+
+////////////////////////
+/// unit cost breakdown
+/////////////////////////
+
+document.getElementById("cost").addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+function costBreakdown() {
+  /// the names
+  let itemA = document.getElementById("itemA").value;
+  let itemB = document.getElementById("itemB").value;
+  let itemC = document.getElementById("itemC").value;
+  let itemD = document.getElementById("itemD").value;
+  /// the item counts
+  let itemACount = document.getElementById("itemAcount").value;
+  let itemBCount = document.getElementById("itemBcount").value;
+  let itemCCount = document.getElementById("itemCcount").value;
+  let itemDCount = document.getElementById("itemDcount").value;
+  /// the total cost
+  let itemAcost = document.getElementById("itemAcost").value;
+  let itemBcost = document.getElementById("itemBcost").value;
+  let itemCcost = document.getElementById("itemCcost").value;
+  let itemDcost = document.getElementById("itemDcost").value;
+
+  /// now we break it down and show the results
+
+  let nameA = document.getElementById("itemAname");
+  nameA.innerText = `A = ${itemA}`;
+  let unitCostA = document.getElementById("costA");
+  let mathA = (Math.round((itemAcost / itemACount) * 100) / 100).toFixed(2);
+  unitCostA.innerText = ` $ ${mathA} per unit A`;
+
+  let nameB = document.getElementById("itemBname");
+  nameB.innerText = `B = ${itemB}`;
+  let unitCostB = document.getElementById("costB");
+  let mathB = (Math.round((itemBcost / itemBCount) * 100) / 100).toFixed(2);
+  unitCostB.innerText = ` $ ${mathB} per unit B`;
+
+  let nameC = document.getElementById("itemCname");
+  nameC.innerText = `C = ${itemC}`;
+  let unitCostC = document.getElementById("costC");
+  let mathC = (Math.round((itemCcost / itemCCount) * 100) / 100).toFixed(2);
+  unitCostC.innerText = ` $ ${mathC} per unit C`;
+
+   let nameD = document.getElementById("itemDname");
+   nameD.innerText = `D = ${itemD}`;
+   let unitCostD = document.getElementById("costD");
+   let mathD = (Math.round((itemDcost / itemDCount) * 100) / 100).toFixed(2);
+   unitCostD.innerText = ` $ ${mathD} per unit D`;
 }
