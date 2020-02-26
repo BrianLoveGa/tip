@@ -115,24 +115,24 @@ function costBreakdown() {
   let nameA = document.getElementById("itemAname");
   nameA.innerText = `A = ${itemA}`;
   let unitCostA = document.getElementById("costA");
-  let mathA = (Math.round((itemAcost / itemACount) * 100) / 100).toFixed(2);
+  let mathA = (((itemAcost / itemACount) * 100) / 100).toFixed(2);
   unitCostA.innerText = ` $ ${mathA} per unit A`;
 
   let nameB = document.getElementById("itemBname");
   nameB.innerText = `B = ${itemB}`;
   let unitCostB = document.getElementById("costB");
-  let mathB = (Math.round((itemBcost / itemBCount) * 100) / 100).toFixed(2);
+  let mathB = (((itemBcost / itemBCount) * 100) / 100).toFixed(2);
   unitCostB.innerText = ` $ ${mathB} per unit B`;
 
   let nameC = document.getElementById("itemCname");
   nameC.innerText = `C = ${itemC}`;
   let unitCostC = document.getElementById("costC");
-  let mathC = (Math.round((itemCcost / itemCCount) * 100) / 100).toFixed(2);
+  let mathC = (((itemCcost / itemCCount) * 100) / 100).toFixed(2);
   unitCostC.innerText = ` $ ${mathC} per unit C`;
 
    let nameD = document.getElementById("itemDname");
    nameD.innerText = `D = ${itemD}`;
    let unitCostD = document.getElementById("costD");
-   let mathD = (Math.round((itemDcost / itemDCount) * 100) / 100).toFixed(2);
+   let mathD = (((itemDcost / itemDCount) * 100) / 100).toFixed(2);
    unitCostD.innerText = ` $ ${mathD} per unit D`;
 }
