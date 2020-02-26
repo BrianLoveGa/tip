@@ -12,9 +12,19 @@ body {
   padding: 10px;
   border-radius: 10px;
 }
+.split {
+  background-color: rgb(75, 181, 238);
+  padding: 10px;
+  border-radius: 10px;
+}
+.discount {
+  background-color: rgb(138, 236, 138);
+  padding: 10px;
+  border-radius: 10px;
+}
 
 .space {
-  height: 20px;
+  height: 80px;
 }
 
 .mainButtons {
