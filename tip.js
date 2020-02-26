@@ -82,5 +82,5 @@ function discount() {
   let newCost = Math.round((amount - amountOff) * 100) / 100;
   let round = Math.round(amountOff * 100) / 100;
 
-  neeew.innerText = `$ ${newCost} ($ ${amount} - $ ${round}) `;
+  neeew.innerText = `$ ${newCost} = ($ ${amount} - $ ${round}) `;
 }

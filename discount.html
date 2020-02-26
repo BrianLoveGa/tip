@@ -7,28 +7,27 @@
     <link rel="stylesheet" type="text/css" href="tip.css" />
   </head>
   <body>
-    <h1>how much of a discount is x% off of Y?</h1>
-    
-    <div class="discount">
-        <h2>
-           Percent discount X = (if 14 % enter 14 ... if 33% enter 33)
-      <input type="number" class="disc" id="percent" name="percent" />
-                item cost Y = 
-      <input type="number" class="disc" id="itemAmount" name="amount" />
- 
-</h2>
+    <h1>how much of a discount is X% off of Y cost?</h1>
 
+    <div class="discount">
+      <h2>if 14 % enter 14 ... if 33% enter 33</h2>
+      <h2>
+        Percent discount X =
+        <input type="number" class="disc" id="percent" name="percent" />
+        <br />
+        item cost Y =
+        <input type="number" class="disc" id="itemAmount" name="amount" />
+      </h2>
     </div>
-    <h2>input y</h2>
-    <h3>click</h3>
+
     <button class="click" id="discount" onclick="discount()">
       How much is this discount?
     </button>
     <h2>New value = (old value - discount)</h2>
     <h2><div id="new"></div></h2>
-    <a href="tip.html">Service Tip</a>
-    <a href="split.html">Split the bill</a>
-    <a href="index.html">HOME</a>
+    <a class="homeBtn" href="tip.html">Service Tip</a>
+    <a class="homeBtn" href="split.html">Split the bill</a>
+    <a class="homeBtn" href="index.html">HOME</a>
 
     <script src="tip.js"></script>
   </body>
