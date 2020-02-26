@@ -20,20 +20,20 @@ function setBill() {
     // return check times %'s...
 
     var totalFif = check * 0.15;
-    tFif = Math.round(totalFif * 100) / 100;
-    fif.textContent = tFif;
+    tFif = (Math.round(totalFif * 100) / 100).toFixed(2);
+    fif.textContent = `$ ${tFif}`;
 
     var totalTwen = check * 0.2;
-    tTwen = Math.round(totalTwen * 100) / 100;
-    twen.textContent = tTwen;
+    tTwen = (Math.round(totalTwen * 100) / 100).toFixed(2);
+    twen.textContent = `$ ${tTwen}`;
 
     var totalTwenFv = check * 0.25;
-    tTwFv = Math.round(totalTwenFv * 100) / 100;
-    twfv.textContent = tTwFv;
+    tTwFv = (Math.round(totalTwenFv * 100) / 100).toFixed(2);
+    twfv.textContent = `$ ${tTwFv}`;
 
     var totalThirty = check * 0.3;
-    tThIR = Math.round(totalThirty * 100) / 100;
-    thir.textContent = tThIR;
+    tThIR = (Math.round(totalThirty * 100) / 100).toFixed(2);
+    thir.textContent = `$ ${tThIR}`;
   }
 }
 
@@ -50,10 +50,10 @@ function splitBill() {
   let people = document.getElementById("billSplitPeople").value;
   let amount = document.getElementById("billSplitAmount");
   let info = document.getElementById("info");
-  let even = Math.round((bill / people) * 100) / 100;
+  let even = (Math.round((bill / people) * 100) / 100).toFixed(2);
   amount.innerText = `$ ${even}  per person`;
   let leftOver = document.getElementById("left");
-  let remainder = Math.round((even * people - bill) * 100) / 100;
+  let remainder = (Math.round((even * people - bill) * 100) / 100).toFixed(2);
   if (remainder === 0.0) {
     leftOver.innerText = `even split ${remainder} `;
     info.innerText = "";
@@ -79,8 +79,8 @@ function discount() {
   let percent = document.getElementById("percent").value;
   let amount = document.getElementById("itemAmount").value;
   let amountOff = amount * (percent / 100);
-  let newCost = Math.round((amount - amountOff) * 100) / 100;
-  let round = Math.round(amountOff * 100) / 100;
+  let newCost = (Math.round((amount - amountOff) * 100) / 100).toFixed(2);
+  let round = (Math.round(amountOff * 100) / 100).toFixed(2);
 
   neeew.innerText = `$ ${newCost} = ($ ${amount} - $ ${round}) `;
 }

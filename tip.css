@@ -9,6 +9,8 @@ body {
 
 .tip {
   background-color: palevioletred;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .space {
