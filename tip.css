@@ -23,6 +23,12 @@ body {
   border-radius: 10px;
 }
 
+.unit {
+    background-color: rgb(236, 138, 211);
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .space {
   height: 80px;
 }
